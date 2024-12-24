@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 
 // assets
-import { FaCaretDown } from 'react-icons/fa';
+// import { FaCaretDown } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const ListComponentHome = () => {
@@ -59,13 +59,13 @@ const ListComponentHome = () => {
   return (
     <ul className="w-full container flex justify-center items-center flex-wrap gap-4 gap-y-0">
       {categories.map((category) => (
-        <li key={category.c_id} className="group cursor-pointer">
+        <li key={category.c_id} className="group cursor-pointer ">
           <button
             className="flex items-center gap-2 py-[0.40rem] hover:text-orange-600 focus:outline-none"
             onClick={() => handleCategoryClick(category.c_id)}
           >
             {category.category || 'Unnamed Category'}
-            <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+            {/* <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" /> */}
           </button>
 
           {/* i think the data is modified, its no more including subcategories */}
@@ -77,14 +77,17 @@ const ListComponentHome = () => {
                     subCategory.show === '1' && (
                       <li
                         key={subCategory.c_id}
-                        className="py-1 hover:text-orange-600 cursor-pointer text-left"
+                        // className="py-1 hover:text-orange-600 cursor-pointer text-left"
+                        className="py-1 cursor-pointer text-left relative hover:text-orange-600 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-orange-600 after:transition-all after:duration-300 hover:after:w-full"
                         onClick={() => handleSubCategoryClick(subCategory.c_id)}
                       >
                         {subCategory.category || 'Unnamed Subcategory'}
                       </li>
+
                     )
                 )}
               </ul>
+
             </div>
           )}
         </li>

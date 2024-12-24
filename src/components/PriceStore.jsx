@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from 'react-router-dom';
 
-const PriceStore = ({priceStoreData}) => {
+const PriceStore = ({ priceStoreData }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,27 +17,31 @@ const PriceStore = ({priceStoreData}) => {
   }, []);
 
   const handlePriceRangeClick = (num) => {
-    navigate(`/ProductListPriceStore/${num}`); //somewhere
+    navigate(`/ProductListPriceStore/${num}`); // navigate to appropriate route
   };
 
+  // Array of image paths
+  const images = [
+    "/199 store (1).jpg",
+    "/299 store (1).jpg",
+    "/499 store.jpg",
+  ];
+
   return (
-    <div className="mt-7 mb-12">
+    <div className="mt-7 mb-12 bg-[#000080] p-10">
       <div className="container mx-auto text-center">
         <h1 className="text-3xl font-bold text-orange-600">Price Store</h1>
         <p className="text-xs text-gray-400 mb-6">Find the best deals within your budget.</p>
         
         <div className="flex justify-center gap-6 flex-wrap">
-          {[1,2,3,4].map((num) => (
+          {images.map((image, index) => (
             <div
-              key={num}
-              onClick={() => handlePriceRangeClick(num)}
-
+              key={index}
+              onClick={() => handlePriceRangeClick(index + 1)}
               className="cursor-pointer border rounded-lg shadow-lg w-[300px] hover:shadow-2xl flex flex-col items-center relative overflow-hidden bg-blue-100"
               data-aos="fade-up"
             >
-              <img src="/sampleUnder.jpg" alt="priceStoreImage" />
-
-              
+              <img src={image} alt={`Price Store ${index + 1}`} />
             </div>
           ))}
         </div>

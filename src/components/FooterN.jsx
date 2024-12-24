@@ -6,7 +6,7 @@ const FooterN = () => {
   return (
     <>
       <Test344 />
-      <footer className="bg-[#1863a9] text-white">
+      <footer className="bg-[#000080] text-white">
         <div className="container mx-auto px-4 py-8">
 
           {/* Links Section */}
