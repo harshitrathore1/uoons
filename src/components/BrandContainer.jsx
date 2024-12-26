@@ -14,7 +14,7 @@ const BrandsData = [
 const BrandContainer = () => {
   return (
     // <div className="mt-14 p-4 mb-12">
-    <div className="mt-14 p-4 mb-12 bg-gradient-to-br from-[#000080] to-blue-300 h-full w-full">
+    <div className="mt-14 p-4 mb-12 bg-gradient-to-br from-[#000080] to-blue-500 h-full w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">

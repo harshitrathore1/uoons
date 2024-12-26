@@ -28,9 +28,9 @@ const PriceStore = ({ priceStoreData }) => {
   ];
 
   return (
-    <div className="mt-7 mb-12 bg-[#000080] p-10">
+    <div className="mt-7 mb-12 bg-gradient-to-br from-[#000080] to-blue-600 h-full w-full p-10">
       <div className="container mx-auto text-center">
-        <h1 className="text-3xl font-bold text-orange-600">Price Store</h1>
+        <h1 className="text-3xl font-bold text-white">Price Store</h1>
         <p className="text-xs text-gray-400 mb-6">Find the best deals within your budget.</p>
         
         <div className="flex justify-center gap-6 flex-wrap">

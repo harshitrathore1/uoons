@@ -429,9 +429,10 @@ const baseURL = "https://uoons.com/";
           </div>
 
         </div>
-
-        <div className='hidden xl:flex flex-col w-1/6'>
-                                      {/* salient features and seller highlight */}
+        
+        {/* salient features and seller highlight */}
+        {/* <div className='hidden xl:flex flex-col w-1/6'>
+                                      
                 <div className='flex items-start gap-3 mt-6 '>
                   <div className="p-6 bg-white shadow-lg rounded-lg ">
                     <h3 className="text-2xl font-bold text-gray-800">Salient Features</h3>
@@ -459,7 +460,7 @@ const baseURL = "https://uoons.com/";
                     </div>
                   </div>
                 </div>
-        </div>
+        </div> */}
 
       </div>
     )

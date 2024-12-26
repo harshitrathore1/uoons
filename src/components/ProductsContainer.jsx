@@ -121,10 +121,10 @@ const ProductsContainer = (props) => {
           <MdOutlineKeyboardArrowRight />
         </button>
         {/* Body section */}
-        <div ref={containerRef} className="relative w-full overflow-x-scroll flex flex-col ">
+        <div ref={containerRef} className="relative w-full overflow-x-scroll flex flex-col scrollbar-hide">
           
           <div
-            className="flex py-2 w-fit rounded-lg justify-center gap-6 overflow-x-scroll scrollbar-hide"
+            className="flex py-2 w-fit rounded-lg justify-center gap-6"
           >
             {/* card section */}
             {data.map((item) => (
